@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="emp1" class="com.ras.beans.Employee1">
+<constructor-arg name="eno" value="1001"/>
+<constructor-arg name="ename" value="rasool"/>
+<constructor-arg name="billamt" value="2000.0f"/>
+</bean>
+<bean id="stud1" class="com.ras.beans.Student">
+<property name="sname" value="rasool"></property>
+<property name="collegename" value="vahini"></property>
+<property name="age" value="22"></property>
+<property name="qlfy" value="btech"></property>
+</bean>
+
+</beans>
