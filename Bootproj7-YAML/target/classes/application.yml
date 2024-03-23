@@ -1,0 +1,24 @@
+pinfo:
+  pid: 1001
+  pname: rasool
+  favcolors:
+    -red
+    -green
+    -blue
+  studies:
+    -10+2-MPC
+    -10+2-CEC
+    -10+2-MEC
+    -10+2-BIPC
+  phonenumbers:
+    - 9381048461
+    - 8763742828
+    - 217022749
+    
+  iddetails:
+    adhar: 73983189
+    panno: 3981700274
+  jobinfo:
+    desg: dev
+    company: infosys
+    deptno: 20
