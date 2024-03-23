@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- datasource cfg -->
+<bean id="drds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+<property name="username" value="sys as SYSDBA"/>
+<property name="password" value="93810"/>
+</bean>
+<!-- DAO CFG -->
+<bean id="empDAO" class="com.ras.dao.EmployeeDAOimpl">
+<constructor-arg name="ds" ref="drds"/>
+</bean>
+<!-- Service class cfg -->
+<bean id="empdao" class="com.ras.service.EmployeeMgmtServiceimpl">
+<constructor-arg name="dao" ref="empDAO"/>
+</bean>
+<!-- controller -->
+<bean id="controller" class="com.ras.controller.MainController">
+<constructor-arg name="service" ref="empdao"></constructor-arg>
+</bean>
+</beans>
